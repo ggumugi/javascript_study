@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 시험 점수에 따른 학점을 구하세요. 단, 0 ~ 100점 사이의 숫자만 입력하세요.
+         const score = Number(prompt('점수를 입력해주세요.', 0))
+
+         // 잘못된 점수 입력시 재입력받음
+         if (score < 0 || score > 100) {
+            alert('잘못 입력된 점수입니다! 0 ~ 100점 사이의 숫자만 입력하세요.')
+            location.reload() // 새로고침
+         } else {
+            // 추천 코드
+            if (score >= 90) {
+               document.write('A학점')
+            } else if (score >= 80) {
+               document.write('B학점')
+            } else if (score >= 70) {
+               document.write('C학점')
+            } else if (score >= 60) {
+               document.write('D학점')
+            } else {
+               document.write('F학점')
+            }
+         }
+      </script>
+   </body>
+</html>
