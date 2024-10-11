@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // inch를 입력받아 cm로 바꾸는 코드 (1 inch = 2.54 cm)
+
+         // 1. inch 값 입력받기
+         const input = prompt('inch 값을 입력해주세요', '0')
+         // 2. 입력받은 값을 숫자형으로 변경
+         const numinput = Number(input)
+         // 3. 숫자형으로 변경한 inch값을 cm로 바꾸기
+         const cm = numinput * 2.54
+         // 5. cm 값을 alert 에 출력
+         alert(`${numinput} inch = ${cm.toFixed(2)} cm`) // toFixed(2) : 소수점 2째 자리까지 표시
+      </script>
+   </body>
+</html>
