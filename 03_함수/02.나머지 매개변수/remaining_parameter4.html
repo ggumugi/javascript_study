@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function test(first, ...rests) {
+            // Array.isArray(값) 값이 배열인지 아닌지 판단해줌
+            if (Array.isArray(first)) {
+               // first가 배열이면
+               console.log('first:', first)
+               console.log('rest:', rests)
+            } else if (typeof first == 'number') {
+               console.log('first:', first)
+               console.log('rests:', rests)
+            }
+         }
+         test([52, 273, 32, 103, 275, 24, 57])
+         test(52, 273, 32, 103, 275, 24, 57)
+      </script>
+   </body>
+</html>
