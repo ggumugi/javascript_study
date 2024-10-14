@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const students = ['김영수', '이지혜', '류상진', '박미나', '서한울']
+         // indexOf는 찾는 요소가 없다면 -1을 준다. -> -1을 이용해 사용자에게 에러 메시지를 보여줄 수 있음
+         const ind = students.indexOf('류상진')
+         if (ind == -1) {
+            alert('해당 학생은 존재하지 않습니다.')
+         }
+         students.splice(ind, 1)
+         console.log(students)
+      </script>
+   </body>
+</html>
