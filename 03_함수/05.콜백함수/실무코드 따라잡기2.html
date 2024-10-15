@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // a회사의 부서명을 저장하고 있음, 회사의 개발부는 3개를 가지고 있는데 개발부1, 개발부2, 개발부3으로 넘버링 해서 데이터를 저장하고 싶음
+         const depts = ['개발부', '개발부', '연구부', '개발부', '인사부', '회계부', '마케팅부']
+         let i = 0
+         const depts1 = depts.map((dept) => {
+            if (dept.indexOf('개발부') !== -1) {
+               i++
+               return dept + i
+            } else {
+               return dept
+            }
+         })
+         console.log(depts1)
+      </script>
+   </body>
+</html>
