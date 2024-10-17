@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1 class="title" id="title">HEADERS</h1>
+      <script>
+         // 한가지 요소만 가지고 온다
+         const header = document.querySelector('#title') // id가 title인 친구를 가져온다
+         //const header = document.querySelector('.title')
+         //const header = document.querySelector('h1')
+         //const header = document.querySelector('h1.title')
+         // style은 json 객체 이므로 속성값은 문자열 혹은 숫자형 사용
+         header.style.color = 'white'
+         header.style.backgroundColor = 'black'
+         header.style.padding = '10px'
+         console.log(header)
+      </script>
+   </body>
+</html>
