@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <input type="text" />
+      <p></p>
+      <script>
+         const input = document.querySelector('input')
+         const p = document.querySelector('p')
+         // 이메일인지 아닌지 판단을 하는 함수
+         const isEmail = (value) => {
+            // 골뱅이를 갖고 있고 골뱅이 뒤에 점이 있으면 이메일 형식
+
+            return value.indexOf('@') > 1 && value.indexOf('.', value.indexOf('@')) > value.indexOf('@')
+            /*
+            return value.indexOf('@') >= 1 && value.split('@')[1].indexOf('.') >= 1
+            */
+         }
+
+         input.addEventListener('keyup', (event) => {
+            const value = event.currentTarget.value
+            if (isEmail(value)) {
+               p.style.color = 'green'
+               p.textContent = `${value} : 이메일 형식`
+            } else {
+               p.style.color = 'red'
+               p.textContent = `${value} : 이메일 형식이 아닙니다`
+            }
+         })
+      </script>
+   </body>
+</html>

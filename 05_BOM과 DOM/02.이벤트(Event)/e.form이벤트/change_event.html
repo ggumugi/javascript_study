@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <select>
+         <option value="food1">떡볶이</option>
+         <option value="food2">순대</option>
+         <option value="food3">오뎅</option>
+         <option value="food4">튀김</option>
+      </select>
+      <p>선택 :</p>
+      <script>
+         const select = document.querySelector('select')
+         const p = document.querySelector('p')
+
+         select.addEventListener('change', (event) => {
+            const options = event.currentTarget.options
+            const index = event.currentTarget.options.selectedIndex
+            console.log(options[index].textContent)
+            p.textContent = `선택 : ${options[index].textContent}` // p 태그에 선택한 food 표시
+
+            // value 속성안에 있는 값 가져오기
+            const selectedFood = event.currentTarget.value
+            console.log(selectedFood) // food1, food2, food3, food4 로 console.log()로 확인
+            const selectedFood2 = event.target.value
+            console.log(selectedFood2)
+         }) // 상태가 변할 때 실행되는 이벤트
+      </script>
+   </body>
+</html>

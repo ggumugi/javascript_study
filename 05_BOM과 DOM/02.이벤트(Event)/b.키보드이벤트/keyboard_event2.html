@@ -10,10 +10,13 @@
          const h1 = document.querySelector('h1')
          const print = (event) => {
             let output = ''
-            output += `alt: ${event.altKey}<br>`
-            output += `ctrl: ${event.ctrlKey}<br>`
+            output += `alt: ${event.altKey}<br>` // alt 키 눌렀을 때 true
+            output += `ctrl: ${event.ctrlKey}<br>` // ctrl
             output += `shift: ${event.shiftKey}<br>`
-            output += `code: ${typeof event.code !== 'undefined' ? event.code : event.keyCode}<br>`
+            output += `code: ${typeof event.code !== 'undefined' ? event.code : event.key}<br>`
+            // event.code = 사용자가 누른 키의 정밀한 제어
+            // event.key = 사용자가 입력한 값 파악
+            // event.keycode= 사용 x 실행 x 지원 중단
             h1.innerHTML = output
          }
 
