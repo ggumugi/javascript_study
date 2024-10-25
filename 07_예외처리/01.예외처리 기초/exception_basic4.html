@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>document</title>
+   </head>
+   <body>
+      <script>
+         try {
+            const array = new Array(9999999999999999999)
+            console.log(array)
+         } catch (exception) {
+            console.log(exception)
+            console.log(exception.name)
+            console.log(exception.message)
+         }
+      </script>
+   </body>
+</html>

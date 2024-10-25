@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>예제</title>
+   </head>
+   <body>
+      <script>
+         const h1 = document.querySelector('h1')
+
+         // 문제 해결 첫번째 방법
+         if (h1) {
+            h1.textContent = '안녕하세요'
+         } else {
+            // 개발자한테 알려준다
+            console.log('h1 태그를 추출할 수 없습니다.')
+         }
+
+         console.log('완료!')
+      </script>
+   </body>
+</html>

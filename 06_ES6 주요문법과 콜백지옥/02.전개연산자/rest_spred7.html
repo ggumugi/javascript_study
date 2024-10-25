@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Document</title>
+      <script>
+         const dog1 = {
+            이름: '구름',
+            나이: 6,
+            종족: '강아지',
+         }
+         const dog2 = {
+            // ...dog1 을 앞에 대입하면 뒤에 쓰는 것이 덮어써지는데 dog1을 뒤에 대입하면 원하게 설정하는 값이 설정 안됨
+
+            이름: '별',
+            나이: 1,
+            예방접종: true,
+            ...dog1,
+         }
+
+         console.log(JSON.stringify(dog1))
+         console.log(JSON.stringify(dog2))
+      </script>
+   </head>
+   <body></body>
+</html>

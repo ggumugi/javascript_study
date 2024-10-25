@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         let deposit = 10000 //잔고
+
+         //계좌에서 돈 인출
+         function withdrawal(money) {
+            if (deposit < money) {
+               throw new Error('잔고가 부족합니다.')
+               // 함수 종료
+            }
+            deposit -= money
+         }
+
+         try {
+            withdrawal(11000)
+            // withdrawal(5000)
+            console.log(`${deposit}원 남았습니다.`)
+         } catch (error) {
+            console.log('에러가 발생했습니다.' + error)
+         }
+      </script>
+   </body>
+</html>

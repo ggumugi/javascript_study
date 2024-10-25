@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         function test(arr) {
+            if (arr[0] != undefined) {
+               console.log(arr[0])
+            } else {
+               throw new Error('배열의 0번 인덱스를 지정하지 않았습니다.')
+            }
+         }
+         try {
+            test([])
+         } catch (exception) {
+            console.log(exception)
+         }
+      </script>
+   </body>
+</html>

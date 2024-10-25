@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Document</title>
+      <script>
+         function divide(a, b) {
+            if (b === 0) {
+               // 단순하게 예외를 발생시킴
+               // throw '0으로는 나눌 수 없습니다.'
+
+               // 예외를 강제 발생시킴(조금 더 자세하게 발생시킴)
+               throw new Error('0으로는 나눌 수 없습니다.')
+            }
+            return a / b
+         }
+
+         console.log(divide(10, 2))
+         console.log(divide(10, 0))
+      </script>
+   </head>
+   <body></body>
+</html>

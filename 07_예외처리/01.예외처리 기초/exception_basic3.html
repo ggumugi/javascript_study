@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>document</title>
+   </head>
+   <body>
+      <script>
+         try {
+            const h1 = document.querySelector('h1')
+            h1.textContent = '안녕하세요'
+         } catch (exception) {
+            console.log(exception)
+            console.log('h1 태그를 추출할 수 없습니다.')
+         }
+
+         console.log('완료!')
+      </script>
+   </body>
+</html>

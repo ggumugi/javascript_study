@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Document</title>
+      <script>
+         const dog1 = {
+            이름: '구름',
+            나이: 6,
+            종족: '강아지',
+         }
+         const dog2 = { ...dog1 }
+         dog2.이름 = '별'
+         dog2.나이 = 1
+
+         console.log(JSON.stringify(dog1))
+         console.log(JSON.stringify(dog2))
+      </script>
+   </head>
+   <body></body>
+</html>
