@@ -49,8 +49,8 @@ main .container .row .story {
    text-overflow: ellipsis;
    overflow: hidden;
    display: -webkit-box;
-   -webkit-line-clamp: 3;
    -webkit-box-orient: vertical;
+   -webkit-line-clamp: 3;
 }
 
 main .container .tv_p {
@@ -117,5 +117,25 @@ footer {
 
    main .container ul.movie-info li {
       padding-bottom: 10px;
+   }
+}
+
+@media all and (max-width: 992px) {
+   main .container .row .story_detail {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+   }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+   .col-sm-9 {
+      width: 60%;
+   }
+
+   .col-sm-3 {
+      width: 40%;
    }
 }
