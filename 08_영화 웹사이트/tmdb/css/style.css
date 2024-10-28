@@ -23,9 +23,99 @@ a {
 p {
    margin: 0;
 }
+
+/* main */
+
+main .container {
+   padding: 40px 0;
+}
+
+/* card 길이 안맞는 부분 수정 */
+
+main .container .row .card {
+   height: 100%;
+}
+
+main .container .row .card a {
+   height: 80%;
+}
+
+main .container .row .card img {
+   height: 100%;
+   object-fit: cover; /* 이미지를 높이에 맞추고 너비를 자동으로 조절(이미지 비율 무시)*/
+}
+
+main .container .row .story {
+   text-overflow: ellipsis;
+   overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+}
+
+main .container .tv_p {
+   margin: 20px auto;
+}
+
+main .container .row .tv_card {
+   padding: 15px 0;
+}
+
+/* detail.html */
+
+main .container .movie-detail > ul.movie-info,
+p {
+   margin-bottom: 10px !important;
+}
+
+main .container ul.movie-info {
+   display: flex;
+}
+
+main .container ul.movie-info li {
+   padding-right: 13px;
+}
+
+main .container .season {
+   margin-top: 50px;
+   padding: 40px 0 30px 70px;
+   border: 1px solid rgb(193, 193, 193);
+   border-radius: 10px;
+   background-color: rgba(193, 193, 193, 0.158);
+}
+
+main .container .season p a {
+   padding: 10px;
+   text-decoration: underline;
+}
+
+main .container .season p {
+   font-size: 1.3em;
+}
+
 /* footer */
 footer {
    height: 100px;
    line-height: 100px;
    background-color: #f2f2f2;
+}
+
+/* 576px ~ 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+   .col-sm-9 {
+      width: 60%;
+   }
+
+   .col-sm-3 {
+      width: 40%;
+   }
+
+   /* flex 해제 */
+   main .container ul.movie-info {
+      display: initial;
+   }
+
+   main .container ul.movie-info li {
+      padding-bottom: 10px;
+   }
 }
